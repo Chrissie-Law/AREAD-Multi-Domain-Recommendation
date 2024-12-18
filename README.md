@@ -1,6 +1,6 @@
-# One for Dozens: Adaptive REcommendation for All Domains with Counterfactual Augmentation (AREAD)
+# AREAD - One for Dozens: Adaptive REcommendation for All Domains with Counterfactual Augmentation
 
-This is the official implementation of the AREAD model in our paper: **One for Dozens: Adaptive REcommendation for All Domains with Counterfactual Augmentation**, which has been accepted at AAAI 2025. [paper](https://arxiv.org/abs/2412.11905)
+This is the official implementation of the AREAD model in our paper: **One for Dozens: Adaptive REcommendation for All Domains with Counterfactual Augmentation**, which has been accepted at AAAI 2025. :sparkles: [paper](https://arxiv.org/abs/2412.11905)
 
 If this repository or our paper is beneficial for your work, please cite:
 
@@ -29,45 +29,26 @@ Multi-domain recommendation (MDR) aims to enhance recommendation performance acr
 To address these issues, we propose Adaptive REcommendation for All Domains with counterfactual augmentation (AREAD). AREAD employs a hierarchical expert structure (HEI) and learns domain-specific expert network selection masks (HEMP) with counterfactual augmentation. Our experiments on two public datasets, each encompassing over twenty domains, demonstrate AREAD's effectiveness, especially in data-sparse domains.
 
 <div align="center">
-    <figure>
-        <img src="./img/hei.png" width="80%" alt="Hierarchical Expert Integration (HEI)">
-        <figcaption>Figure 1: Hierarchical Expert Integration (HEI)</figcaption>
-    </figure>
+      <img src="./img/hei.png" width="70%" alt="Hierarchical Expert Integration (HEI)">
+      <p><strong><figcaption>Figure 1:</strong> Hierarchical Expert Integration (HEI)</p>
 </div>
-
+<br>
+            
 <div align="center">
-    <figure>
-        <img src="./img/hemp.png" width="80%" alt="Hierarchical Expert Mask Pruning (HEMP)">
-        <figcaption>Figure 2: Hierarchical Expert Mask Pruning (HEMP)</figcaption>
-    </figure>
+      <img src="./img/hemp.png" width="70%" alt="Hierarchical Expert Mask Pruning (HEMP)">
+      <p><strong><figcaption>Figure 2:</strong> Hierarchical Expert Mask Pruning (HEMP)</p>
 </div>
-
-
+<br>
+            
 <div align="center">
-    <figure>
-        <img src="./img/aug1.png" width="80%" alt="Popularity-based Counterfactual Augmenter">
-        <figcaption>Figure 3: Popularity-based Counterfactual Augmenter</figcaption>
-    </figure>
+      <img src="./img/aug1.png" width="70%" alt="Popularity-based Counterfactual Augmenter">
+      <p><strong><figcaption>Figure 3:</strong> Popularity-based Counterfactual Augmenter</p>
 </div>
-
+<br>
 
 ## Datasets
 
-For our experiments, we utilize two widely recognized datasets: the **Amazon dataset** and the **AliCCP dataset**. Both datasets are structured around item categories, serving as distinct domains for our recommendation tasks. Dataset statistics are detailed in the following table. Sample data files are included in the repository folders (`dataset/aliccp` and `dataset/amazon`) to facilitate initial setup and verification. To perform full-scale training and harness the complete capabilities of AREAD, users are required to download the complete datasets from the provided links.
-
-**Table: Statistics of the datasets.** "Majority ratio" refers to the sample ratio in the largest domain, and "Minor domains" represent domains with less than 2% of the samples.
-
-| Metrics            | Amazon     | AliCCP   |
-|--------------------|------------|----------|
-| **#Users**         | 2,899,335  | 538,358  | 
-| **#Items**         | 1,368,287  | 24,096   |
-| **#Samples**       | 17,664,862 | 4,454,814|
-| **#Positive samples** | 8,790,575 | 329,416  |
-| **#Domains**       | 25         | 30       |
-| **Majority ratio** | 17%        | 60.51%   |
-| **#Minor domains** | 12         | 23       |
-| **Augmentation ratio** | 10%     | 10%      |
-
+For our experiments, we utilize two widely recognized datasets: the **Amazon dataset** and the **AliCCP dataset**. Both datasets are structured around item categories, serving as distinct domains for our recommendation tasks. Sample data files are included in the repository folders (`dataset/aliccp` and `dataset/amazon`) to facilitate initial setup and verification. To perform full-scale training and harness the complete capabilities of AREAD, users are required to download the complete datasets from the provided links.
 
 ### Amazon Review Dataset
 
@@ -78,21 +59,6 @@ For our experiments, we utilize two widely recognized datasets: the **Amazon dat
 
 - **Download**: [AliCCP Dataset](https://tianchi.aliyun.com/dataset/408).
 - **Reference**: Ma, X., Zhao, L., Huang, G., et al. (2018). Entire space multi-task model: An effective approach for estimating post-click conversion rate. In *SIGIR 2018*, pages 1137-1140. 
-
-### Dataset Handling
-The datasets selected, Amazon and AliCCP, are prepared and utilized as follows:
-
-**Amazon Dataset:**
-- We process all 25 available item categories from the dataset, covering data from the most recent 12 months.
-- Users and items are filtered to include those with at least 3 interactions.
-- Ratings above a user's average are labeled positive. (Labeling based on a global average would yield a positive ratio as high as 68%, which deviates from practical usage in recommendation systems.)
-- We track historical sequences of positive and negative interactions from the past 6 months to enrich feature sets.
-- Data is split temporally into training, validation, and test sets in a 90:5:5 ratio.
-
-**AliCCP Dataset:**
-- We focus on users and items with more than 15 interactions, sampling 30 distinct item categories as separate domains.
-- This dataset employs binary labels derived from click events.
-- The dataset's original training segment is used for model training, while the test set is split into validation and test subsets in equal proportions.
 
 ### Cloud-Theme Dataset
 
