@@ -1,24 +1,29 @@
 # AREAD - One for Dozens: Adaptive REcommendation for All Domains with Counterfactual Augmentation
 
-This is the official implementation of the AREAD model in our paper: **One for Dozens: Adaptive REcommendation for All Domains with Counterfactual Augmentation**, which has been accepted at AAAI 2025. :sparkles: [paper](https://arxiv.org/abs/2412.11905)
+This is the official implementation of the AREAD model in our paper: **One for Dozens: Adaptive REcommendation for All Domains with Counterfactual Augmentation**, which has been accepted at AAAI 2025. :sparkles: 
+- :page_facing_up: [Extended Version (arXiv, **recommended**)](https://arxiv.org/abs/2412.11905)
+- :page_facing_up: [Official Paper (AAAI)](https://ojs.aaai.org/index.php/AAAI/article/view/33340)  
 
 If this repository or our paper is beneficial for your work, please cite:
 
 ```
-Luo, Huishi et al. “One for Dozens: Adaptive REcommendation for All Domains with Counterfactual Augmentation.” (2024).
+Luo, H., Chen, Y., Wu, Y., Zhuang, F., & Wang, D. (2025). One for Dozens: Adaptive REcommendation for All Domains with Counterfactual Augmentation. Proceedings of the AAAI Conference on Artificial Intelligence, 39(12), 12300-12308. https://doi.org/10.1609/aaai.v39i12.33340
 ```
 
 or in bibtex style:
 
-```
-@misc{luo2024aread,
-      title={One for Dozens: Adaptive REcommendation for All Domains with Counterfactual Augmentation}, 
-      author={Huishi Luo and Yiwen Chen and Yiqing Wu and Fuzhen Zhuang and Deqing Wang},
-      year={2024},
-      eprint={2412.11905},
-      archivePrefix={arXiv},
-      primaryClass={cs.IR},
-      url={https://arxiv.org/abs/2412.11905}, 
+```bibtex
+@article{luo2025aread,
+  title={One for Dozens: Adaptive REcommendation for All Domains with Counterfactual Augmentation},
+  volume={39},
+  url={https://ojs.aaai.org/index.php/AAAI/article/view/33340},
+  DOI={10.1609/aaai.v39i12.33340},
+  number={12},
+  journal={Proceedings of the AAAI Conference on Artificial Intelligence},
+  author={Luo, Huishi and Chen, Yiwen and Wu, Yiqing and Zhuang, Fuzhen and Wang, Deqing},
+  year={2025},
+  month={Apr.},
+  pages={12300--12308}
 }
 ```
 
@@ -100,4 +105,8 @@ We extend our gratitude to the following repositories, whose valuable resources 
 
 5. [HiNet](https://github.com/mrchor/HiNet): Source code for paper "HiNet: Novel Multi-Scenario & Multi-Task Learning with Hierarchical Information Extraction" (ICDE 2023), used as a baseline in our experiments.
 
+## License
+
+This project is licensed under the Apache License 2.0.  
+See the [LICENSE](./LICENSE) file for details.
 
