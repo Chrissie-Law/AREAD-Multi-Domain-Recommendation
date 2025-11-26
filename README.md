@@ -13,17 +13,21 @@ Luo, H., Chen, Y., Wu, Y., Zhuang, F., & Wang, D. (2025). One for Dozens: Adapti
 or in bibtex style:
 
 ```bibtex
-@article{luo2025aread,
+@inproceedings{luo2025aread,
   title={One for Dozens: Adaptive REcommendation for All Domains with Counterfactual Augmentation},
   volume={39},
-  url={https://ojs.aaai.org/index.php/AAAI/article/view/33340},
+  url={https://doi.org/10.1609/aaai.v39i12.33340},
   DOI={10.1609/aaai.v39i12.33340},
+  isbn={978-1-57735-897-8},
+  publisher={AAAI Press},
   number={12},
-  journal={Proceedings of the AAAI Conference on Artificial Intelligence},
+  booktitle={Proceedings of the Thirty-Ninth AAAI Conference on Artificial Intelligence and Thirty-Seventh Conference on Innovative Applications of Artificial Intelligence and Fifteenth Symposium on Educational Advances in Artificial Intelligence},
   author={Luo, Huishi and Chen, Yiwen and Wu, Yiqing and Zhuang, Fuzhen and Wang, Deqing},
   year={2025},
   month={Apr.},
-  pages={12300--12308}
+  pages={12300--12308},
+  articleno={1367},
+  series={AAAI'25/IAAI'25/EAAI'25}
 }
 ```
 
